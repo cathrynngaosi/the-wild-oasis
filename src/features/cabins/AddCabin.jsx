@@ -2,21 +2,18 @@ import { useState } from "react";
 import Button from "../../ui/Button";
 import Modal from "../../ui/Modal";
 import CreateCabinForm from "./CreateCabinForm";
+import CabinTable from "./CabinTable";
 
 function AddCabin() {
-  const [isOpeMondal, setisOpeMondal] = useState(false);
-
   return (
-    <div>
-      <Button onClick={() => setisOpeMondal((show) => !show)}>
-        Add new cabin
-      </Button>
-      {isOpeMondal && (
-        <Modal onClose={() => setisOpeMondal(false)}>
-          <CreateCabinForm onCloseModal={() => setisOpeMondal(false)} />
-        </Modal>
-      )}
-    </div>
+    <Modal>
+      <Modal.Open opens="cabin-form">
+        <Button> Add new cabin</Button>
+      </Modal.Open>
+      <Modal.Window name="cabin-form">
+        <CreateCabinForm />
+      </Modal.Window>
+    </Modal>
   );
 }
 
