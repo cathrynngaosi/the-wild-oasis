@@ -1,3 +1,4 @@
 # The Wild Oasis
 
-Main project in Jonas Schmedtmann's The Ultimate React Course on Udemy.
+The main project in Jonas Schmedtmann's The Ultimate React Course on Udemy.
+Built with React Query and Supabase.
